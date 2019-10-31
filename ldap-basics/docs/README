@@ -1,0 +1,41 @@
+LDAP Basics class documents
+
+Note that the document files have embedded fonts so they should work on any machine.
+Make sure that the PDF is generated as PDF/A.1 (use File->Export as PDF...
+rather than the PDF icon in the toolbar). This will embed the fonts, which
+is essential for commercial printing.
+
+Slides for projection and notes that go with them in the printed material.
+OpenOffice/LibreOffice document.
+
+ldap-basics-slides.odt
+	This generates:
+
+	ldap-basics-notes.pdf
+	ldap-basics-outline.txt
+	ldap-basics-slides.pdf
+
+Instructions for practical exercises:
+OpenOffice/LibreOffice document.
+
+ldap-basics-exercises.odt
+	This generates:
+
+	ldap-basics-exercises.pdf
+
+Cover for printed material:
+Scribus document, set up for full bleed on an A4 saddle-stitched (stapled) booklet.
+When generating PDF, make sure you embed all fonts.
+
+ldap-basics-cover.sla
+	This generates:
+
+	ldap-basics-cover.pdf
+
+The PDFs should work on most commercial print services.
+Some (e.g. Lulu) will allow you to supply several PDFs for the inside pages.
+Others may limit you to one PDF for the cover and one for the main pages;
+in that case if you want notes and exercises in the same printed book you
+will need to join the files with a tool like pdfunite (from the poppler-tools package):
+	pdfunite ldap-basics-notes.pdf ldap-basics-exercises.pdf all.pdf
+

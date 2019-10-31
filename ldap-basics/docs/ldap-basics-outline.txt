@@ -1,0 +1,61 @@
+LDAP Basics: quick-start tutorial with practical work
+
+Course Overview
+Directories and LDAP
+Directory service standards
+LDAP Overview
+Data model 1: entries
+Data model 2: the DIT
+Entry names
+Simple Search
+Exercise 1: create an LDAP server
+LDAP Data Definitions
+Acronyms
+Schema and other difficult words
+Inheritance
+Attribute types
+Attribute definition
+Syntaxes
+Matching Rules
+Object classes
+Objectclass definitions
+Objectclass rules
+OIDs
+Data model summary
+Exercise 2: Install GUI browser
+LDAP operations
+	Bind
+	Search
+	Add
+	Delete
+	Modify
+	Compare
+	Abandon
+	Extended
+Search filter examples
+Search results
+LDIF files
+Command-line tools
+Exercise 3: Load data from LDIF, Modify data from GUI
+Authentication using LDAP
+	Simple bind
+	SASL bind
+Authorisation using LDAP
+LDAP groups
+POSIX passwd data in LDAP
+POSIX group data in LDAP
+Exercise 4: Simple authentication
+More LDAP Topics
+TLS
+Replication
+Distributed DIT
+DIT Design
+Access Control
+Client-side programming
+
+
+
+Andrew Findlay
+Skills 1st Ltd
+andrew.findlay@skills-1st.co.uk
+

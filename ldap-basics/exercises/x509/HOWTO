@@ -1,0 +1,40 @@
+Creating SSL keys for OpenLDAP
+==============================
+
+First make the Certificate Authority (only need to do this ONCE):
+
+  openssl genrsa -aes128 -out ca.key 2048
+
+	Set the passphrase for the CA key to 'secret'
+
+  openssl req -new -x509 -days 8000 -key ca.key -out ca.cert -config openssl.cnf -extensions v3_ca
+
+	Fill in the fields as appropriate - not much is critical here
+	but the CN (Common Name) should be something like 'Master CA'
+
+Useful info comes from these:
+
+  openssl x509 -in ca.cert -noout -hash
+  openssl x509 -in ca.cert -noout -text
+
+Now make a key for the LDAP servers:
+
+  openssl genrsa -out ldap.key 2048
+
+	Note that this key is not encrypted so it must be protected by file permissions
+
+Generate a Certificate Signing Request:
+
+  openssl req -new -sha256 -key ldap.key -out ldap.csr -config openssl.cnf
+
+	The Common Name field should be 'ldap.example.org'
+	Several alternative names are specified in the v3_req clause of the config file.
+
+Sign the certificate using the CA key:
+
+  openssl x509 -req -sha256 -in ldap.csr -out ldap.cert -CA ca.cert -CAkey ca.key -CAcreateserial -days 7999 -extfile openssl.cnf -extensions v3_req
+
+Check the certificate:
+
+  openssl x509 -in ldap.cert -noout -text
+

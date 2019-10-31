@@ -1,0 +1,249 @@
+# structure.ldif
+#
+# Create basic DIT structure for tests
+#
+# Andrew Findlay
+# Dec 2008
+#
+# andrew.findlay@skills-1st.co.uk
+#
+# $Id$
+#
+########################################################################
+# Create the base object
+########################################################################
+#
+dn: dc=example,dc=org
+objectclass: organization
+objectclass: dcObject
+o: The Example Org
+description: Simple example
+dc: example
+
+########################################################################
+# Create the people entry
+########################################################################
+#
+dn: dc=people,dc=example,dc=org
+objectclass: organizationalUnit
+objectclass: dcObject
+ou: People
+dc: people
+
+########################################################################
+# Create the groups entry
+########################################################################
+#
+dn: dc=groups,dc=example,dc=org
+objectclass: organizationalUnit
+objectclass: dcObject
+ou: Groups
+dc: groups
+
+########################################################################
+# Create some entries for people
+########################################################################
+# All passwords are 'notverysecret'
+#
+dn: uid=fiona,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Fiona Pinnington
+cn: Fiona Pinnington
+sn: Pinnington
+uid: fiona
+mail: fiona@example.org
+telephoneNumber: +44 1234 567000
+userPassword: notverysecret
+uidNumber: 10000
+gidNumber: 10000
+homeDirectory: /home/fiona
+gecos: Fiona Pinnington
+
+dn: uid=cary,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Caroline Dobson
+cn: Caroline Dobson
+sn: Dobson
+uid: cary
+mail: cary@example.org
+telephoneNumber: +44 1234 567001
+userPassword: notverysecret
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/cary
+gecos: Caroline Dobson
+
+dn: uid=clive,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Clive Rhodes
+cn: Clive Rhodes
+sn: Rhodes
+uid: clive
+mail: clive@example.org
+telephoneNumber: +44 1234 567002
+userPassword: notverysecret
+uidNumber: 10002
+gidNumber: 10002
+homeDirectory: /home/clive
+gecos: Clive Rhodes
+
+dn: uid=roger,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Roger Trevelyn
+cn: Roger Trevelyn
+sn: Trevelyn
+uid: roger
+mail: roger@example.org
+telephoneNumber: +44 1234 567003
+userPassword: notverysecret
+uidNumber: 10003
+gidNumber: 10003
+homeDirectory: /home/roger
+gecos: Roger Trevelyn
+
+dn: uid=justin,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Justin Trott
+cn: Justin Trott
+sn: Trott
+uid: justin
+mail: justin@example.org
+telephoneNumber: +44 1234 567004
+userPassword: notverysecret
+uidNumber: 10004
+gidNumber: 10004
+homeDirectory: /home/justin
+gecos: Justin Trott
+
+dn: uid=nic,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Nicholas Banks
+cn: Nicholas Banks
+sn: Banks
+uid: nic
+mail: nic@example.org
+telephoneNumber: +44 1234 567005
+userPassword: notverysecret
+uidNumber: 10005
+gidNumber: 10005
+homeDirectory: /home/nic
+gecos: Nicholas Banks
+
+dn: uid=jo,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Joanne Gozdawa
+cn: Joanne Gozdawa
+sn: Gozdawa
+uid: jo
+mail: jo@example.org
+telephoneNumber: +44 1234 567006
+userPassword: notverysecret
+uidNumber: 10006
+gidNumber: 10006
+homeDirectory: /home/jo
+gecos: Joanne Gozdawa
+
+dn: uid=julie,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Julie Bravery
+cn: Julie Bravery
+sn: Bravery
+uid: julie
+mail: julie@example.org
+telephoneNumber: +44 1234 567007
+userPassword: notverysecret
+uidNumber: 10007
+gidNumber: 10007
+homeDirectory: /home/julie
+gecos: Julie Bravery
+
+dn: uid=tom,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Thomas Whittle
+cn: Thomas Whittle
+sn: Whittle
+uid: tom
+mail: tom@example.org
+telephoneNumber: +44 1234 567008
+userPassword: notverysecret
+uidNumber: 10008
+gidNumber: 10008
+homeDirectory: /home/tom
+gecos: Thomas Whittle
+
+dn: uid=nb,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: Nicholas Banks
+cn: Nicholas Banks
+sn: Banks
+uid: nb
+mail: nb@example.org
+telephoneNumber: +44 1234 567009
+userPassword: notverysecret
+uidNumber: 10009
+gidNumber: 10009
+homeDirectory: /home/nb
+gecos: Nicholas Banks
+
+########################################################################
+# Some groups of different sorts
+########################################################################
+
+dn: cn=manager,dc=groups,dc=example,dc=org
+objectclass: groupOfNames
+cn: manager
+description: Group of managers
+member: uid=tom,dc=people,dc=example,dc=org
+member: uid=nb,dc=people,dc=example,dc=org
+member: uid=old1,dc=people,dc=example,dc=org
+member: uid=alan,dc=people,dc=example,dc=org
+member: uid=norman,dc=people,dc=example,dc=org
+member: uid=judy,dc=people,dc=example,dc=org
+member: uid=susan,dc=people,dc=example,dc=org
+member: uid=damy,dc=people,dc=example,dc=org
+member: uid=steve,dc=people,dc=example,dc=org
+member: uid=tony,dc=people,dc=example,dc=org
+member: uid=rolly,dc=people,dc=example,dc=org
+member: uid=awk,dc=people,dc=example,dc=org
+member: uid=andrew,dc=people,dc=example,dc=org
+member: uid=paul,dc=people,dc=example,dc=org
+member: uid=leonard,dc=people,dc=example,dc=org
+member: uid=eric,dc=people,dc=example,dc=org
+
+dn: cn=kiwi,dc=groups,dc=example,dc=org
+objectclass: groupOfNames
+cn: kiwi
+description: People from New Zealand
+member: uid=tom,dc=people,dc=example,dc=org
+member: uid=jo,dc=people,dc=example,dc=org
+
+dn: cn=dialout,dc=groups,dc=example,dc=org
+objectclass: posixGroup
+cn: dialout
+gidNumber: 16
+description: Group of Linux users who may control modems
+memberuid: tom
+memberuid: julie
+memberuid: justin
+memberuid: roger
+

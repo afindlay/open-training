@@ -1,0 +1,32 @@
+LDAP Basics class
+
+Open Source Open Training
+
+A half-day hands-on introduction to LDAP and Directory Server concepts.
+This class is designed to be used by an instructor who knows LDAP well.
+Practical sessions use Linux images running in the cloud and accessed
+with SSH and/or VNC.
+
+The kit contains:
+	Slides and notes
+	Exercise guide
+	Exercise setup files
+	Instructor notes
+
+The slides, notes and exercise guide are set up to produce an A4 booklet.
+Many commercial print services will accept the PDFs.
+
+The entire kit is released under the Creative Commons CC-BY-SA licence.
+Roughly, this means that you can use it to give courses and you can
+modify it and distribute the modified version. You must give credit to
+the original author and any other contributors, you must apply the same
+licence to your version, and you must not pretend that you wrote the whole thing.
+See full details at https://creativecommons.org/licenses/by-sa/4.0/
+
+I would be pleased to know when you use this material, and you are encouraged
+to contribute updates back to the project.
+
+Andrew Findlay
+October 2019
+
+andrew.findlay@skills-1st.co.uk

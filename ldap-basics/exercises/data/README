@@ -1,0 +1,35 @@
+This directory contains data and scripts to generate test files for
+directory servers.
+
+generate.pl	Script to generate lists of names in plain or LDIF form.
+		usage:
+		./generate.pl [-P] [number] [Org DN] [mail domain]
+
+		-P causes Posix account information to be generated
+
+given-names	Input data for generate.pl
+surnames
+
+names.ldif	Sample generated LDIF file
+
+names		List of the names found in the LDIF file (NOTE: not all unique)
+
+extract-surnames.pl
+		Script to extract surnames from a list of input names
+		(very simple-mainded)
+
+extract-given.pl
+		Script to extract given names from a list of input names
+		(very simple-mainded)
+
+The source data is based on a list of university computer users
+in 1987. It is impossible to identify the original people from the data
+here, but the generated names should have similar statistical properties
+to the original set. No attempt has been made to match surnames and
+given names culturally, so some unlikely combinations will show up in
+the output!
+
+Andrew Findlay
+Andrew.Findlay@skills-1st.co.uk
+January 2001
+

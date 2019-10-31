@@ -1,0 +1,16 @@
+dn: uid=FIXME,dc=people,dc=example,dc=org
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: posixAccount
+displayName: FIXME
+cn: FIXME
+sn: FIXME
+uid: FIXME
+mail: FIXME
+telephoneNumber: FIXME
+userPassword: notverysecret
+uidNumber: 20001
+gidNumber: 20001
+homeDirectory: /home/FIXME
+gecos: FIXME
+

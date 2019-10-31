@@ -1,0 +1,19 @@
+Setup notes for LDAP Basics class
+
+This is intended as a very fast intro to LDAP, not to a specific server
+so much of the config must be already in place at the start of the class.
+
+Student machine images should be based on a Linux desktop setup,
+configured to bring up a desktop ready for VNC access.
+
+Build OpenLDAP from source and install it in /usr/local (or install from
+the Linux Tool Box package perhaps).
+
+Fix /etc/hosts so that ldap1.example.org is on loopback
+
+Install Apache Directory Studio and link it into ~/bin as 'studio'
+
+NOTE: don't use the smallest AWS instance. 1GB RAM is not enough
+for Apache Directory Studio!
+
+

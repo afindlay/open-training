@@ -1,0 +1,4 @@
+URI ldap://ldap1.example.org:1389/
+BASE dc=example,dc=org
+TLS_REQCERT demand
+TLS_CACERT ../x509/ca.cert
