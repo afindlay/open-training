@@ -39,3 +39,10 @@ in that case if you want notes and exercises in the same printed book you
 will need to join the files with a tool like pdfunite (from the poppler-tools package):
 	pdfunite ldap-basics-notes.pdf ldap-basics-exercises.pdf all.pdf
 
+You can order a printed copy of the finished book here:
+
+	http://www.lulu.com/shop/andrew-findlay/ldap-basics-open-training/paperback/product-24293533.html
+
+Andrew Findlay
+November 2019
+
